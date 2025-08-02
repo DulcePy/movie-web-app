@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dulce Figueredo">
+    <meta name="description" content="Web application for rating movies and series using Tailwind CSS. ">
+    <meta name="keywords"
+        content="movies, series, rating, Tailwind CSS, web application, responsive design, user interface">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/icon.png" type="image/x-icon">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+    <title>Movie Ratings</title>
+</head>
+
+<body class="bg-blue-950">
+
+    <header class="py-6 shadow-lg">
+        <nav class="flex justify-between items-center max-w-screen-xl mx-auto">
+
+            <!-- Logo-->
+            <div class="flex items-center gap-5 text-lg text-gray-100">
+                <div>
+                    <p class="text-gray-200 font-extrabold text-4xl uppercase">movie</p>
+                </div>
+                <div class="text-lg font-semibold">
+                    <p>Explore</p>
+                </div>
+            </div>
+
+            <!-- Search bar-->
+            <div>
+                <div>
+                    <input type="text"
+                        class="input text-gray-600 text-lg lg:w-96 rounded-md placeholder:bg-gray-300 placeholder:text-gray-600 placeholder:text-lg lg:p-2 p-1 bg-gray-300 border-none"
+                        placeholder="Search">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto">
+
+        <section class="grid grid-cols-3">
+            <div class="col-span-2">
+                <div class="relative">
+                    <div class="banner-slide bg-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    </div>
+
+                    <div class="absolute left-10 -bottom-14 w-full">
+
+                        <div class="flex lg:gap-16 sm:gap-8 gap-4 md:flex-row flex-col">
+                            <!-- Movie Poster -->
+                            <img class="w-40"
+                                src="https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                                alt="">
+                            <!-- Movie details -->
+                            <div>
+                                <h2 class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-gray-100 font-semibold">Civil War (2024)</h2>
+                                <p class="text-gray-100 lg:mt-4 text-wrap lg:block max-w-96">
+                                    In the near future, a group of war journalists attempt to survive while reporting
+                                    the truth as the United States stands on the brink of civil war.
+                                </p>
+                                <p class="mt-4 text-gray-100">Genres: War, Action, Drama</p>
+                                <p class="mt-4 text-gray-100">
+                                    <span class="text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    Rating: 7.2
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div></div>
+        </section>
+    </main>
+</body>
+
+</html>

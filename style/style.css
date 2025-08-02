@@ -1,0 +1,10 @@
+.banner-slide {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg");
+  min-height: 450px;
+}
+
+@media (min-width: 1280px) {
+    .banner-slide {
+        min-width: 850px;
+    }
+}
