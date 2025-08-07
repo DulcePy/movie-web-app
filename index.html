@@ -21,7 +21,7 @@
 
 <body class="bg-black">
 
-    <header class="bg-gray-900 p-4 m-4">
+    <header class="bg-gray-900 p-4">
         <nav class="flex justify-between items-center max-w-screen-xl mx-auto m-4">
 
             <!-- Logo-->
@@ -53,6 +53,7 @@
             <div class="col-span-2">
                 <div class="relative">
                     <div class="banner-slide bg-cover">
+                        <img id="banner-poster" src="" alt="" class="blur-[3px]">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     </div>
 
@@ -60,23 +61,22 @@
 
                         <div class="flex lg:gap-16 sm:gap-8 gap-4 md:flex-row flex-col">
                             <!-- Movie Poster -->
-                            <img class="w-40"
-                                src="https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                                alt="">
+                            <img id="poster" class="w-40 h-60" src="" alt="">
                             <!-- Movie details -->
                             <div>
-                                <h2 class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-gray-100 font-semibold">
-                                    Civil War (2024)</h2>
-                                <p class="text-zinc-300 lg:mt-4 text-wrap lg:block max-w-96">
+                                <h2 id="poster-title"
+                                    class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-gray-100 font-semibold">
+                                </h2>
+                                <p id="poster-description" class="text-zinc-300 lg:mt-4 text-wrap lg:block max-w-96">
                                     In the near future, a group of war journalists attempt to survive while reporting
                                     the truth as the United States stands on the brink of civil war.
                                 </p>
-                                <p class="mt-4 text-zinc-300">Genres: War, Action, Drama</p>
-                                <p class="mt-4 text-zinc-300">
+                                <p id="poster-lang" class="text-zinc-300"></p>
+                                <p class="text-zinc-300">
                                     <span class="text-yellow-400">
                                         <i class="fa-solid fa-star"></i>
                                     </span>
-                                    Rating: 7.2
+                                    <span id="poster-rating"></span>
                                 </p>
                             </div>
                         </div>
@@ -89,122 +89,19 @@
             <aside class="xl:mt-0 mt-24 ml-6">
                 <p class="text-gray-200 font-bold text-xl py-3">Up Next</p>
 
-                <div class="bg-gradient-to-b from-gray-900 via-gray-900 to-black rounded-lg p-4">
-
-                    <div class="flex items-center gap-4 mb-4">
-                        <img class="w-24 h-[100%]"
-                            src="https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                            alt="">
-
-                        <div class="text-zinc-300">
-                            <p>
-                                In the near future, a group of war journalists attempt to survive while reporting
-                                the
-                                truth as the United States stands
-                                on the brink of civil war
-                            </p>
-                            <p>
-                                Genres: War, Action, Drama
-                            </p>
-                            <p>
-                                <span class="text-yellow-400">
-                                    <i class="fa-solid fa-star"></i>
-                                </span> Rating: 7.2
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-4 mb-4">
-                        <img class="w-24 h-[100%]"
-                            src="https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                            alt="">
-
-                        <div class="text-zinc-300">
-                            <p>
-                                In the near future, a group of war journalists attempt to survive while reporting
-                                the
-                                truth as the United States stands
-                                on the brink of civil war
-                            </p>
-                            <p>
-                                Genres: War, Action, Drama
-                            </p>
-                            <p>
-                                <span class="text-yellow-400">
-                                    <i class="fa-solid fa-star"></i>
-                                </span> Rating: 7.2
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-4 mb-4">
-                        <img class="w-24 h-[100%]"
-                            src="https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                            alt="">
-
-                        <div class="text-zinc-300">
-                            <p>
-                                In the near future, a group of war journalists attempt to survive while reporting
-                                the
-                                truth as the United States stands
-                                on the brink of civil war
-                            </p>
-                            <p>
-                                Genres: War, Action, Drama
-                            </p>
-                            <p>
-                                <span class="text-yellow-400">
-                                    <i class="fa-solid fa-star"></i>
-                                </span> Rating: 7.2
-                            </p>
-                        </div>
-                    </div>
+                <div id="aside-card" class="bg-gradient-to-b from-gray-900 via-gray-900 to-black rounded-lg p-4">
+                    <!-- aside card -->
                 </div>
             </aside>
-
-
         </section>
 
         <!-- top rated movies -->
-        <section>
+        <section class="mt-8">
             <h2 class="text-2xl text-gray-100 font-bold ml-6">Top Rated Movies</h2>
 
-            <div id="movie-container" class="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4 px-4 md:px-6">
-
-
+            <div id="movie-container"
+                class="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4 px-4 md:px-6">
                 <!-- movie card -->
-                <!--div class="hover:scale-105 transition-transform my-3">
-                    <div class="flex flex-col overflow-hidden duration-300">
-                        <div class="relative">
-                            <img src="https://m.media-amazon.com/images/M/MV5BNWM2OTY2OTItMmRjNS00N2VhLWE1ZWYtMzc2YTM3NmE1M2JhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                                alt="Civil War (2024)" class="rounded-t-lg">
-                        </div>
-                    </div>
-
-                    <div class="z-10 flex flex-col items-stretch h-fit justify-between bg-gray-900 p-3 rounded-b-lg">
-                        <div class="cursor-pointer">
-                            <h2 class="text-gray-100 text-left md:text-[16px] text-sm font-semibold line-clamp-1 w-fit">
-                                Civil War (2024)</h2>
-                            <div class="mt-2 md:text-[14px] text-[14px] text-zinc-300">
-                                <h3>
-                                    <span class="text-yellow-400">
-                                        <i class="fa-solid fa-star"></i>
-                                    </span> Rating: 8.7
-                                </h3>
-
-                                <h3>
-                                    Language: English
-                                </h3>
-
-                                <h3>
-                                    Release: 1991
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </!--div -->
-
-
             </div>
 
             <!-- button load more -->
@@ -217,7 +114,7 @@
         </section>
     </main>
 
-    <footer class="bg-gray-900 m-4">
+    <footer class="bg-gray-900 mt-6">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <!-- logo -->
@@ -233,7 +130,8 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase">Resources</h2>
                         <ul class="text-gray-500 font-medium">
                             <li class="mb-4">
-                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                <a href="https://developer.themoviedb.org/reference/intro/getting-started"
+                                    class="hover:underline">TMDB API</a>
                             </li>
                             <li>
                                 <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
@@ -242,8 +140,8 @@
                     </div>
 
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <h2 class="mb-6 text-sm font-semibold uppercase text-gray-100">Follow us</h2>
+                        <ul class="text-gray-500 font-medium">
                             <li class="mb-4">
                                 <a href="https://github.com/DulcePy/movie-web-app" class="hover:underline ">Github</a>
                             </li>
