@@ -39,9 +39,9 @@ function displayMovies(movies) {
     movieElement.innerHTML = `
             <div class="flex flex-col overflow-hidden duration-300">
         <div class="relative">
-          <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}" alt="${
-      movie.title
-    }" class="rounded-t-lg">
+          <img class="w-72 h-[80%]" src="https://image.tmdb.org/t/p/w300${
+            movie.poster_path
+          }" alt="${movie.title}" class="rounded-t-lg">
         </div>
       </div>
       <div class="z-10 flex flex-col items-stretch h-fit justify-between bg-gray-900 p-3 rounded-b-lg">
@@ -123,6 +123,33 @@ function displayMoviesAside(movies) {
   });
 }
 
+async function searchMoviesByTitle(title) {
+  const urlSearchMovie = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
+    title
+  )}`;
+
+  try {
+    const response = await fetch(urlSearchMovie);
+    const data = await response.json();
+    displayMovies(data.results);
+
+  } catch (error) {
+    console.error('Error searching movie: ', error);
+  }
+}
+
+function handleSearch(event) {
+  event.preventDefault();
+  const searchInput = document.getElementById("search-input").value;
+
+  if (searchInput.trim() !== "") {
+    searchMoviesByTitle(searchInput);
+    //searchInput.innerHTML = "";
+  }
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearch);
 // Iniciar las peticiones
 fetchTrendingMovies();
 fetchTrendingMoviesAside();
