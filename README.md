@@ -83,6 +83,3 @@ The project uses Tailwind CSS for styling, providing:
 
 - **Dulce Figueredo** - [GitHub](https://github.com/DulcePy) | [LinkedIn](https://www.linkedin.com/in/dulce-figueredo-py)
 
-## 📄 License
-
-This project is open source and available under the MIT License.
