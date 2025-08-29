@@ -166,4 +166,6 @@ class MovieApp {
   }
 }
 
-new MovieApp();
+document.addEventListener("DOMContentLoaded", () => {
+  new MovieApp();
+});
