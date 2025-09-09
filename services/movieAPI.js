@@ -1,8 +1,7 @@
-//import config from "../config.js";
+import config from "../config.js";
 
 const BASE_URL = "https://api.themoviedb.org/3";
-//const API_KEY = config.API_KEY;
-const API_KEY = import.meta.env?.VITE_API_KEY;
+const API_KEY = config.API_KEY;
 
 if (!API_KEY) {
   console.error("API Key not found. Please check your environment variables.");
