@@ -35,6 +35,10 @@ movie-web-app/
 └── script.js            # Main application logic
 ```
 
+## 💻 Project View
+<img src="images/web/movie-app.jpg" alt="Movie web application">
+
+
 ## 🚀 Getting Started
 
 1. Clone the repository:
